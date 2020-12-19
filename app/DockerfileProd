@@ -19,7 +19,7 @@ ADD requirements/base.txt /src/
 ADD requirements/production.txt /src/
 
 # install dependencies
-RUN pip install -r base.txt
+RUN pip install -r production.txt
 
 # copy project
 COPY . /src/
