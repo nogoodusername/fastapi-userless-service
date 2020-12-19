@@ -19,7 +19,7 @@ ADD requirements/base.txt /src/
 ADD requirements/staging.txt /src/
 
 # install dependencies
-RUN pip install -r base.txt
+RUN pip install -r staging.txt
 
 # copy project
 COPY . /src/
