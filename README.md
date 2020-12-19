@@ -1,6 +1,6 @@
 # fastapi-userless-service
 
-This is an example package. Generated using gh:cookiecutter-fastapi-template
+This is an example package. Generated using [gh:cookiecutter-fastapi-template](https://github.com/nogoodusername/cookiecutter-fastapi-template)
 
 ---
 
