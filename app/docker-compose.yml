@@ -1,0 +1,10 @@
+version: "3"
+services:
+  api:
+    container_name: api
+    image: "fastapi-userless-service:latest"
+    environment:
+      - FLAVOUR=prod 
+      - PORT=3001
+    ports:
+      - 3001:3001

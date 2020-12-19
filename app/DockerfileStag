@@ -1,0 +1,28 @@
+# https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker
+
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8-slim
+
+# set environment variables
+ENV PYTHONWRITEBYTECODE 1
+ENV PYTHONBUFFERED 1
+ENV PYTHONIOENCODING UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LC_TYPE en_US.UTF-8
+
+# set working directory
+WORKDIR /src
+
+# copy dependencies
+ADD requirements/base.txt /src/
+ADD requirements/staging.txt /src/
+
+# install dependencies
+RUN pip install -r base.txt
+
+# copy project
+COPY . /src/
+
+# expose port
+EXPOSE 3001
